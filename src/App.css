@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+input {
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color:grey;
+  background-color: white;
+  background-clip: padding-box;
+  border: 1px solid #cceedd;
+  border-radius: .25rem;
+  transition: border-color .15s;
+}
