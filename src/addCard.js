@@ -22,21 +22,13 @@ class AddCard extends Component {
     }
     addNewCard = () => {
         this.props.addNewCardToState(this.state.newCard);
+        
     }
 
     render() {
         return (
             <div>
-                <Cards
-                    number={this.state.newCard.number}
-                    name={this.state.newCard.name}
-                    expiry={this.state.newCard.expiry}
-                    cvc={this.state.newCard.cvc}
-                    focused={this.state.newCard.focus}
-
-                />
-
-
+                
                 <input
                     type="number"
                     name="number"
