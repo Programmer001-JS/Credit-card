@@ -1,39 +1,37 @@
-import React from 'react'
-import CurrentCard from './currentCard';
-import EditCard from './editCard';
-import AddCard from "./addCard"
+import React, { Component } from 'react'
+import AddCard from './AddCard';
+import CurrentCard from './CurrentCard';
 
-
-
-class App extends React.Component {
+class App extends Component {
   state = {
     accounts: [
       {
-        number: '3345678890084632',
-        name: 'danilo',
-        expiry: '2234',
-        cvc: '432',
+        number: '2323323232323232',
+        name: 'Danilo',
+        expiry: '0230',
+        cvc: '211',
         focus: '',
 
-      }
-    ]
-  }
+      }]
+  };
+
   addNewCardToState = (acc) => {
+    let cardCopy = [...this.state.accounts, acc]
     this.setState({
-      accounts: [...this.state.accounts, acc]
+      accounts: cardCopy
     })
   }
+
+   
+
   render() {
     return (
       <div>
-        <CurrentCard accountsCard={this.state.accounts} />
-        <EditCard /><br />
-        <AddCard addNewCardToState={this.addNewCardToState} />
-
+        <CurrentCard accounts={this.state.accounts} />
+        <AddCard addNewCardToState={this.addNewCardToState}/>
+        
       </div>
     )
   }
 }
-
-
-export default App
+export default App;
