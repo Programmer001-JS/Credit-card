@@ -30,11 +30,8 @@ class AddCard extends Component {
         this.props.addNewCardToState(this.state.newCard);
     }
     deleteCard = () => {
-        this.props.deleteCard(this.state.newCard);
-       
+        this.props.deleteCard(this.state.newCard);       
     }
-
-
 
     render() {
         const { number, name, cvc } = this.state.newCard;
@@ -83,7 +80,6 @@ class AddCard extends Component {
 
                 </form>
                 <button disabled={!isEnabled} onClick={this.addNewCard}>Add Card</button>
-                <button onClick={this.deleteCard} className="btn btn-danger">Delete</button>
 
             </div>
         );
